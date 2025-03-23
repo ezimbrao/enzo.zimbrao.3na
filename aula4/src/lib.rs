@@ -24,4 +24,8 @@ mod tests {
         }
     }
 }
+// imcompatibilidade dos parametros do mutiplay_array, pois estava esperndo um ponteiro bruto, que nao era
+//o que estava acontecendo, alem de nao ter um unsafe para manipular os ponteiro brutos 
 
+
+// a funcao multiply_array nao usa o fator "factor", se tornando inutil no codigo, entao foi retirado
