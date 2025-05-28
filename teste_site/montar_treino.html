@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Montar Treino</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Monte seu Treino</h1>
+    <form id="form-treino">
+      <label>
+        <input type="checkbox" name="exercicio" value="Agachamento" />
+        Agachamento
+      </label><br/>
+      <label>
+        <input type="checkbox" name="exercicio" value="Supino" />
+        Supino
+      </label><br/>
+      <label>
+        <input type="checkbox" name="exercicio" value="Puxada" />
+        Puxada na frente
+      </label><br/>
+      <label>
+        <input type="checkbox" name="exercicio" value="Levantamento Terra" />
+        Levantamento Terra
+      </label><br/>
+      <label>
+        <input type="checkbox" name="exercicio" value="Rosca Bíceps" />
+        Rosca Bíceps
+      </label><br/>
+      <br/>
+      <button type="button" class="btn" onclick="mostrarTreino()">Montar</button>
+    </form>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script>
+    function mostrarTreino() {
+      const selecionados = Array.from(document.querySelectorAll('input[name="exercicio"]:checked'))
+        .map(el => el.value);
+
+      const resultado = document.getElementById("resultado");
+
+      if (selecionados.length > 0) {
+        resultado.innerHTML = "<h2>Seu Treino:</h2><ul>" +
+          selecionados.map(ex => `<li>${ex}</li>`).join('') +
+          "</ul>";
+      } else {
+        resultado.innerHTML = "<p style='color: #00BFFF;'>Nenhum exercício selecionado.</p>";
+      }
+    }
+  </script>
+</body>
+</html>

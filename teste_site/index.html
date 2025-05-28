@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Início</title>
+    <style>
+        /* Definindo o estilo geral da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d0e0f; /* Fundo escuro */
+            color: white; /* Texto em branco */
+            height: 100vh; /* A altura da tela vai ocupar 100% da janela */
+            display: flex; /* Usando flexbox para centralizar os itens */
+            justify-content: center; /* Alinhando no centro horizontalmente */
+            align-items: center; /* Alinhando no centro verticalmente */
+            margin: 0; /* Removendo margens padrão */
+        }
+
+        /* Estilo do título */
+        h1 {
+            font-size: 3rem; /* Tamanho do título */
+            margin-bottom: 30px; /* Espaço abaixo do título */
+            text-align: center; /* Centralizando o título */
+        }
+
+        /* Estilo para os botões */
+        .btn {
+            background-color: transparent;
+            border: 2px solid #0739dd; /* Cor azul */
+            color: #0739dd; /* Cor do texto azul */
+            padding: 15px 30px; /* Tamanho do botão */
+            font-size: 1.2rem; /* Tamanho da fonte */
+            cursor: pointer; /* Mostra o cursor como ponteiro ao passar em cima */
+            margin: 10px; /* Espaço entre os botões */
+            border-radius: 5px; /* Bordas arredondadas */
+            text-align: center;
+            transition: all 0.3s ease; /* Transição suave */
+        }
+
+        /* Efeito ao passar o mouse (hover) nos botões */
+        .btn:hover {
+            background-color: #0739dd; /* Fundo azul quando o mouse passa por cima */
+            color: white; /* Texto branco quando o mouse passa */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Projeto</h1>
+        <button class="btn">Montar treino</button>
+        <button class="btn">Escolher treino pronto</button>
+    </div>
+</body>
+</html>
